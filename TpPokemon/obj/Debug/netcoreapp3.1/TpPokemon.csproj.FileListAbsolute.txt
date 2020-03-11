@@ -1,0 +1,11 @@
+C:\Users\Utilisateur\source\repos\TpPokemon\TpPokemon\bin\Debug\netcoreapp3.1\TpPokemon.exe
+C:\Users\Utilisateur\source\repos\TpPokemon\TpPokemon\bin\Debug\netcoreapp3.1\TpPokemon.deps.json
+C:\Users\Utilisateur\source\repos\TpPokemon\TpPokemon\bin\Debug\netcoreapp3.1\TpPokemon.runtimeconfig.json
+C:\Users\Utilisateur\source\repos\TpPokemon\TpPokemon\bin\Debug\netcoreapp3.1\TpPokemon.runtimeconfig.dev.json
+C:\Users\Utilisateur\source\repos\TpPokemon\TpPokemon\bin\Debug\netcoreapp3.1\TpPokemon.dll
+C:\Users\Utilisateur\source\repos\TpPokemon\TpPokemon\bin\Debug\netcoreapp3.1\TpPokemon.pdb
+C:\Users\Utilisateur\source\repos\TpPokemon\TpPokemon\obj\Debug\netcoreapp3.1\TpPokemon.csprojAssemblyReference.cache
+C:\Users\Utilisateur\source\repos\TpPokemon\TpPokemon\obj\Debug\netcoreapp3.1\TpPokemon.AssemblyInfoInputs.cache
+C:\Users\Utilisateur\source\repos\TpPokemon\TpPokemon\obj\Debug\netcoreapp3.1\TpPokemon.AssemblyInfo.cs
+C:\Users\Utilisateur\source\repos\TpPokemon\TpPokemon\obj\Debug\netcoreapp3.1\TpPokemon.dll
+C:\Users\Utilisateur\source\repos\TpPokemon\TpPokemon\obj\Debug\netcoreapp3.1\TpPokemon.pdb
