@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace TpPokemon
 {
     public class ComboCapacity : AbstractCapacity
     {
         public List<AbstractCapacity> CumulatedCapacities { get; set; }
-        public ComboCapacity(string nom, PokeType capacityType, List<AbstractCapacity> cumulatedCapacities) : base(nom, capacityType)
+        public ComboCapacity(string name, PokeType capacityType, List<AbstractCapacity> cumulatedCapacities) : base(name, capacityType)
         {
             CumulatedCapacities = cumulatedCapacities;
         }

@@ -1,0 +1,145 @@
+[{
+		"Name": "Zap Cannon",
+		"CapacityType": "ELEK",
+		"Value": 70
+	},
+	
+	{
+		"Name": "Spark",
+		"CapacityType": "ELEK",
+		"Value": 20
+	},
+	
+	{
+		"Name": "Thunder",
+		"CapacityType": "ELEK",
+		"Value": 65
+	},
+	
+	{
+		"Name": "Plasma Fist",
+		"CapacityType": "ELEK",
+		"Value": 100
+	},
+
+	{
+		"Name": "Pyro Ball",
+		"CapacityType": "FIRE",
+		"Value": 30
+	},
+
+	{
+		"Name": "Brulure",
+		"CapacityType": "FIRE",
+		"Value": 20
+	},
+
+	{
+		"Name": "Fiery Dance",
+		"CapacityType": "FIRE",
+		"Value": 80
+	},
+
+	{
+		"Name": "Burn up",
+		"CapacityType": "FIRE",
+		"Value": 130
+	},
+
+	{
+		"Name": "Magma storm",
+		"CapacityType": "FIRE",
+		"Value": 100
+	},
+
+	{
+		"Name": "SizzlySlide",
+		"CapacityType": "FIRE",
+		"Value": 65
+	},
+	
+	{
+		"Name": "Vine Whip",
+		"CapacityType": "GRASS",
+		"Value": 65
+	},
+	
+	{
+		"Name": "Solar Blade",
+		"CapacityType": "GRASS",
+		"Value": 100
+	},
+	
+	{
+		"Name": "Wood Hammer",
+		"CapacityType": "GRASS",
+		"Value": 120
+	},
+	
+	{
+		"Name": "Razor Leaf",
+		"CapacityType": "GRASS",
+		"Value": 55
+	},
+
+	{
+		"Name": "Stone Edge",
+		"CapacityType": "ROCK",
+		"Value": 85
+	},
+
+	{
+		"Name": "Rock Throw",
+		"CapacityType": "ROCK",
+		"Value": 50
+	},
+
+	{
+		"Name": "Head Smash",
+		"CapacityType": "ROCK",
+		"Value": 60
+	},
+
+	{
+		"Name": "Diamond Storm",
+		"CapacityType": "ROCK",
+		"Value": 100
+	},
+
+	{
+		"Name": "Smack Down",
+		"CapacityType": "ROCK",
+		"Value": 50
+	},
+
+	{
+		"Name": "Rock Wrecker",
+		"CapacityType": "ROCK",
+		"Value": 150
+	},
+
+	{
+		"Name": "Water Gun",
+		"CapacityType": "WATER",
+		"Value": 30
+	},
+
+	{
+		"Name": "Surf",
+		"CapacityType": "WATER",
+		"Value": 90
+	},
+
+	{
+		"Name": "Splishy Splash",
+		"CapacityType": "WATER",
+		"Value": 90
+	},
+
+	{
+		"Name": "Steam Eruption",
+		"CapacityType": "WATER",
+		"Value": 110
+	}
+	
+]

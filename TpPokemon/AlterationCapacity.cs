@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TpPokemon
+﻿namespace TpPokemon
 {
     class AlterationCapacity : AbstractCapacity
     {
         AlterationStatus Alteration { get; set; }
-        public AlterationCapacity(string nom, PokeType capacityType, AlterationStatus alteration) : base(nom, capacityType)
+        public AlterationCapacity(string name, PokeType capacityType, AlterationStatus alteration) : base(name, capacityType)
         {
             Alteration = alteration;
         }

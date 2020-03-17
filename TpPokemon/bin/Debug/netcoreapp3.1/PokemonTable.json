@@ -1,0 +1,52 @@
+[
+        {
+            "Name" : "Bulbasaur",
+            "PokeType" : "GRASS",
+            "Comps" : [
+                "Wood Hammer",
+                "Solar Blade",
+                "Razor Leaf",
+                "Vine Whip"
+            ]
+        },
+        {
+            "Name" : "Charmander",
+            "PokeType" : "FIRE",
+            "Comps" : [
+                "SizzlySlide",
+                "Fiery Dance",
+                "Brulure",
+                "Pyro Ball"
+            ]
+        },
+        {
+            "Name" : "Pikachu",
+            "PokeType" : "ELEK",
+            "Comps" : [
+                "Spark",
+                "Thunder",
+                "Plasma Fist",
+                "Zap Cannon"
+            ]
+        },
+        {
+            "Name" : "Geodude",
+            "PokeType" : "ROCK",
+            "Comps" : [
+                "Smack Down",
+                "Rock Wrecker",
+                "Diamond Storm",
+                "Head Smash"
+            ]
+        },
+        {
+            "Name" : "Squirtle",
+            "PokeType" : "WATER",
+            "Comps" : [
+                "Splishy Splash",
+                "Steam Eruption",
+                "Water Gun",
+                "Surf"
+            ]
+        },
+    ]

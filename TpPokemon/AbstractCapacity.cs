@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TpPokemon
+﻿namespace TpPokemon
 {
     public abstract class AbstractCapacity : IEffect
     {
-        public string Nom { get; }
+        public string Name { get; }
 
         public PokeType CapacityType { get; set; }
 
-        protected AbstractCapacity(string nom, PokeType capacityType)
+        protected AbstractCapacity(string name, PokeType capacityType)
         {
-            Nom = nom;
+	        Name = name;
             CapacityType = capacityType;
         }
 
@@ -20,7 +16,7 @@ namespace TpPokemon
 
         public override string ToString()
         {
-            string temp = $"[{ Nom } - { CapacityType }";
+            string temp = $"[{ Name } - { CapacityType }]";
             return temp;
         }
     }

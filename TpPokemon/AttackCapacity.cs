@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TpPokemon
 {
-    class AttackCapacity : AbstractCapacity
+    public class AttackCapacity : AbstractCapacity
     {
         public int Value { get; set; }
-        public AttackCapacity(string nom, PokeType capacityType, int value) : base(nom, capacityType)
+        public AttackCapacity(string name, PokeType capacityType, int value) : base(name, capacityType)
         {
             Value = value;
         }
@@ -16,14 +14,17 @@ namespace TpPokemon
         {
             if (IsStrongerAgainst(pokeReceiver))
             {
+	            Console.WriteLine($"{ pokeReceiver } subit { Value * 2 } dégats de { this }");
                 pokeReceiver.Hp -= Value * 2;
             }
             else if (IsWeakerAgainst(pokeReceiver))
             {
+	            Console.WriteLine($"{ pokeReceiver } subit { Value / 2 } dégats de { this }");
                 pokeReceiver.Hp -= Value / 2;
             }
             else
             {
+	            Console.WriteLine($"{ pokeReceiver } subit { Value } dégats de { this }");
                 pokeReceiver.Hp -= Value;
             }
         }
@@ -66,11 +67,6 @@ namespace TpPokemon
                     break;
             }
             return IsWeaker;
-        }
-
-        public override string ToString()
-        {
-            return base.ToString() + " Damage : " + Value + "]";
         }
     }
 }

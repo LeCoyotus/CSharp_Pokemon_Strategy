@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TpPokemon
 {
     public class HealCapacity : AbstractCapacity
     {
         public int Value { get; set; }
-        public HealCapacity(string nom, PokeType capacityType, int value) : base(nom, capacityType)
+        public HealCapacity(string name, PokeType capacityType, int value) : base(name, capacityType)
         {
             Value = value;
         }
@@ -15,7 +13,7 @@ namespace TpPokemon
         public override void Do(Pokemon pokeThrower, Pokemon pokeReceiver)
         {
             pokeThrower.Hp += Value;
-            Console.WriteLine($" {pokeThrower.Nom } se soigne de { Value }");
+            Console.WriteLine($" {pokeThrower.Name } se soigne de { Value }");
         }
 
         public override string ToString()
