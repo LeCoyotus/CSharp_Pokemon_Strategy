@@ -1,56 +1,89 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace TpPokemon
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            AttackCapacity Flammeche = new AttackCapacity("Flammeche", PokeType.FIRE, 30);
-            AttackCapacity LanceFlamme = new AttackCapacity("Lance-Flamme", PokeType.FIRE, 50);
+	internal class Program
+	{
+		private static void Main(string[] args)
+		{
+			var gameData = new GameData();
+			gameData.Deserialize();
 
-            AttackCapacity Eclair = new AttackCapacity("Eclair", PokeType.ELEK, 35);
-            AttackCapacity Electrocharge = new AttackCapacity("Electrocharge", PokeType.ELEK, 55);
+			DisplayAllPokemon(gameData.PokemonsTable);
+			DisplayAllCapacities(gameData.AttackCapacitiesTable);
 
-            HealCapacity Soins = new HealCapacity("Soins", PokeType.GRASS, 30);
-            AttackCapacity FouetLiane = new AttackCapacity("Fouet-Liane", PokeType.GRASS, 20);
-            ComboCapacity DrainDeVie = new ComboCapacity("Drain de Vie", PokeType.GRASS, new List<AbstractCapacity>() { FouetLiane, Soins });
+			Pokemon[] temp = SelectFighters(gameData.PokemonsTable);
+			PokeFight(temp[0], temp[1]);
 
+		}
 
-            List<AbstractCapacity> CapacityFire = new List<AbstractCapacity>() { Flammeche, LanceFlamme };
-            List<AbstractCapacity> CapacityElek = new List<AbstractCapacity>() { Eclair, Electrocharge };
-            List<AbstractCapacity> CapacityGrass = new List<AbstractCapacity>() { Soins, DrainDeVie };
+		private static Pokemon[] SelectFighters(List<Pokemon> potentialFighters)
+		{
+			Pokemon[] selection = {null, null};
+			int i = 0;
 
-            Pokemon Salameche = new Pokemon("Salameche", PokeType.FIRE, CapacityFire, 160);
-            Pokemon Pikachu = new Pokemon("Pikachu", PokeType.ELEK, CapacityElek, 200);
-            Pokemon Herbizarre = new Pokemon("Herbizarre", PokeType.GRASS, CapacityGrass, 220);
+			foreach (Pokemon pokemon in potentialFighters)
+			{
+				Console.WriteLine($"[ { i++ } ] - { pokemon }");
+			}
 
-            PokeFight(Salameche, Herbizarre);
+			while (selection[0] == null)
+			{
+				try
+				{
+					Console.Write("Choix du premier Pokemon : ");
+					selection[0] = potentialFighters[Utils.InputNumberPositiv()];
+				}
+				catch (Exception e)
+				{
+					Console.WriteLine(e);
+				}
+			}
+			while (selection[1] == null)
+			{
+				try
+				{
+					Console.Write("Choix du second Pokemon : ");
+					selection[1] = potentialFighters[Utils.InputNumberPositiv()];
+				}
+				catch (Exception e)
+				{
+					Console.WriteLine(e);
+				}
+			}
+			return selection;
+		}
+		private static void PokeFight(Pokemon firstPoke, Pokemon secondPoke)
+		{
+			Console.WriteLine($"Un combat acharné se lance entre {firstPoke} et {secondPoke}");
 
-        }
+			while (firstPoke.Hp > 0 && secondPoke.Hp > 0)
+			{
+				firstPoke.PokemonTurn(secondPoke);
+				Thread.Sleep(1000);
 
-        static void PokeFight(Pokemon firstPoke, Pokemon secondPoke)
-        {
-            Console.WriteLine($"Un combat acharné se lance entre { firstPoke } et { secondPoke }");
+				secondPoke.PokemonTurn(firstPoke);
+				Thread.Sleep(1000);
+			}
 
-            while (firstPoke.Hp > 0 && secondPoke.Hp > 0)
-            {
-                firstPoke.PokemonTurn(secondPoke);
-                secondPoke.PokemonTurn(firstPoke);
+			Console.WriteLine($"{ firstPoke } // { secondPoke }");
+		}
 
-                Console.WriteLine(firstPoke);
-                Console.WriteLine(secondPoke);
-            }
+		private static void DisplayAllCapacities(List<AttackCapacity> listToDisplay)
+		{
+			Console.WriteLine("Liste de toutes les capacités : ");
+			foreach (var atk in listToDisplay) Console.WriteLine(atk);
+		}
 
-            if(firstPoke.Hp < 0)
-            {
-                Console.WriteLine(firstPoke.Nom + " is dead...");
-            }
-            else
-            {
-                Console.WriteLine(secondPoke.Nom + " is dead...");
-            }
-        }
-    }
+		private static void DisplayAllPokemon(List<Pokemon> ourPokemons)
+		{
+			foreach (var pokemon in ourPokemons)
+			{
+				Console.WriteLine(pokemon);
+				foreach (var capacity in pokemon.Comps) Console.WriteLine("\t" + capacity);
+			}
+		}
+	}
 }

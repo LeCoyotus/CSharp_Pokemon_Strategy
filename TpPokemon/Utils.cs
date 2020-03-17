@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TpPokemon
 {
@@ -18,11 +16,16 @@ namespace TpPokemon
             return Roll() >= 50;
         }
 
-        public static int InputNumber()
+        public static int RandomNumberParIsMaxValue(int n)
+        {
+	        return rng.Next(0, n);
+        }
+
+        public static int InputNumberPositiv()
         {
             int n = -1;
 
-            while(n == -1)
+            while(n < 0)
             {
                 try
                 {
